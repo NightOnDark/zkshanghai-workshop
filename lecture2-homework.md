@@ -136,16 +136,8 @@ template Selector(choices) {
     lessThan.out === 1;
     signal ins[choices];
     signal oust;
-
-    signal sums[choices];
-
-  
-
-
-   
+    signal sums[choices];   
     component eqs[choices];
-
-  
     for (var i = 0; i < choices; i ++) {
         eqs[i] = IsEqual();
         eqs[i].in[0] <== i;
@@ -158,7 +150,6 @@ template Selector(choices) {
     for (var i = 1; i < choices; i++) {
         sums[i] <== sums[i-1] + ins[i]
     }
-
     outs <== sums[choices-1];
     out <== outs;
 }
