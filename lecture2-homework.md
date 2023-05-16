@@ -1,7 +1,7 @@
 # 第2课 课后作业
 
 ## 第1题 xxxxxx
-
+```
 template Num2Bits(n) {
     signal input in;
     signal output bits[n];
@@ -16,7 +16,9 @@ template Num2Bits(n) {
 
     z === in;
 }
+```
 
+```
 template IsZero() {
     signal input in;
     signal output out;
@@ -29,7 +31,9 @@ template IsZero() {
 
     in*out === 0;
 }
+```
 
+```
 template IsEqual() {
     signal input in[2];
     signal output out;
@@ -43,7 +47,9 @@ template IsEqual() {
     ins*outs === 0;
     out <== outs;
 }
+```
 
+```
 template IsNegative() {
     signal input in[254];
     signal output sign;
@@ -58,7 +64,9 @@ template IsNegative() {
 
     sign <== comp.out;
 }
+```
 
+```
 template LessThan(n) {
     assert(n <= 252);
     signal input in[2];
@@ -70,8 +78,9 @@ template LessThan(n) {
 
     out <== 1-n2b.out[n];
 }
+```
 
-
+```
 template Selector(choices) {
     signal input in[choices];
     signal input index;
@@ -108,7 +117,7 @@ template Selector(choices) {
     outs <== sums[choices-1];
     out <== outs;
 }
-
+```
 
 
 
